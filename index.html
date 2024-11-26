@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and Transformation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload and Transform Your Image</h1>
+
+        <!-- Function buat upload file -->
+        <input type="file" id="imageInput" accept="image/*" onchange="uploadImage()" />
+
+        <!-- Function list box buat milih convert imagenya itu mau antara grayscale/blur -->
+        <label for="effectSelect">Choose Transformation:</label>
+        <select id="effectSelect" onchange="selectEffect()">
+            <option value="" disabled selected>Select an effect</option>
+            <option value="grayscale">Grayscale</option>
+            <option value="blur">Blur</option>
+        </select>
+
+        <!-- button untuk upload dan convert -->
+        <button id="uploadConvertBtn" onclick="uploadAndConvert()" disabled>Upload and Convert</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
